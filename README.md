@@ -7,8 +7,6 @@
 
 ####L'organisation :
 
-next
-dsfyjkuldfgjhk
 Test branche Yasser
 
 >>>>>>> Stashed changes
