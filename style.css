@@ -88,3 +88,8 @@ tfoot {
     background-color: #333;
     color: #fff;
 }
+img {
+  display: block;
+  margin: 1rem auto;
+  
+}

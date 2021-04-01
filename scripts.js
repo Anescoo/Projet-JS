@@ -46,26 +46,45 @@ request.onload = function () {
 
       //Full Name 
       const p = document.createElement('td');
-      heroes.biography.fullName = heroes.biography.fullName.substring(0, 300);
-      p.textContent = `${heroes.biography.fullName}...`;
+      heroes.biography.fullName = heroes.biography.fullName;
+      p.textContent = 'Full Name : ' + `${heroes.biography.fullName}`;
       
       // Place of birth 
       const m = document.createElement('td')
-      heroes.biography.placeOfBirth = heroes.biography.placeOfBirth.substring(0, 300);
-      m.textContent = `${heroes.biography.placeOfBirth}...`;
+      heroes.biography.placeOfBirth = heroes.biography.placeOfBirth;
+      m.textContent = 'Place of birth : '+ `${heroes.biography.placeOfBirth}`;
      
       // Gender 
       const n = document.createElement('td')
-      heroes.appearance.gender = heroes.appearance.gender.substring(0, 300);
-      n.textContent = `${heroes.appearance.gender}...`;
+      heroes.appearance.gender = heroes.appearance.gender;
+      n.textContent = 'Gender : '+`${heroes.appearance.gender}`;
       
       // Power Stats 
       const b = document.createElement('td')
-      for (const [key, value] of Object.entries(heroes.powerstats)){
+      Object.entries(heroes.powerstats).forEach(([key, value]) => b.textContent+=' '+(`${key}: ${value}`));
+      ///for (const property in heroes.powerstats){
       // heroes.powerstats = heroes.powerstats;
       //b.textContent = `${Object.entries(heroes.powerstats)}...`;
-      b.textContent = `${key}: ${value}`
-    }
+      ///b.textContent = `${heroes.powerstats[property]}`;
+    
+    // Race
+    const r = document.createElement('td')
+    heroes.appearance.race = heroes.appearance.race;
+    r.textContent = 'Race : ' + `${heroes.appearance.race}`
+    // Alignement 
+    const a = document.createElement('td')
+    heroes.biography.alignment = heroes.biography.alignment;
+    a.textContent = 'Alignement : '+ `${heroes.biography.alignment}`;
+   
+    // height 
+    const h = document.createElement('td')
+    heroes.appearance.height = heroes.appearance.height;
+    h.textContent = 'Heigth : '+ `${heroes.appearance.height}`;
+
+     // weight 
+     const w = document.createElement('td')
+     heroes.appearance.weight = heroes.appearance.weight;
+     w.textContent = 'Weigth : '+ `${heroes.appearance.weight}`;
 
       container.appendChild(card);
       card.appendChild(h1);
@@ -74,6 +93,10 @@ request.onload = function () {
       card.appendChild(m);
       card.appendChild(n);
       card.appendChild(b);
+      card.appendChild(r);
+      card.appendChild(a);
+      card.appendChild(h);
+      card.appendChild(w);
       
     });
   } else {
