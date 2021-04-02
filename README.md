@@ -15,6 +15,7 @@ Pour notre groupe nous avons choisi les outils suivants:
     IDE: Visual Studio Code 
 
 # Organigram github
+
 ```mermaid
 graph LR
 A[branche Arnaud] -- push --> D((/dev))
@@ -23,3 +24,4 @@ B[branche Yasser] -- // --> D((/dev))
 C[branche Noé] -- // --> D((/dev))
 
 D -- Review avant push final --> E{{main}}
+```
