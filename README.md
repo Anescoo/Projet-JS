@@ -9,10 +9,10 @@ Le projet sera rendu sur github
 
 # L'organisation :
 
-Pour notre groupe nous avons choisi les outils suivants:
-    Outil git: GitHub Desktop
-    White board et Kanban pour les tâches: Miro 
-    IDE: Visual Studio Code 
+Pour notre groupe nous avons choisi les outils suivants:</br>
+    Outil git: GitHub Desktop </br>
+    White board et Kanban pour les tâches: Miro </br>
+    IDE: Visual Studio Code </br>
 
 # Organigram github
 
