@@ -16,7 +16,7 @@ Pour notre groupe nous avons choisi les outils suivants:
 
 # Organigram github
 
-```mermaid
+
 graph LR
 A[branche Arnaud] -- push --> D((/dev))
 D((/dev)) -- pull --> A[branche Arnaud]
@@ -24,4 +24,4 @@ B[branche Yasser] -- // --> D((/dev))
 C[branche Noé] -- // --> D((/dev))
 
 D -- Review avant push final --> E{{main}}
-```
+
