@@ -1,7 +1,7 @@
 <h1> EXAMEN JAVASCRIPT B1 Info </h1>
 =======
 
-# Les objectifs # :
+# Les objectifs :
 Créer un site web qui regroupe les données de tous les super héros connus à ce jour. </br>
 Il faudra inclure une barre de recherche ainsi que plusieurs pages web et utiliser une api en json fournie. </br>
 Le projet doit être rendu sur un repository github. </br>
@@ -13,7 +13,7 @@ Pour notre groupe nous avons choisi les outils suivants:</br>
     Miro White board et Kanban pour les tâches </br>
     IDE: Visual Studio Code </br>
 
-# Organigram github
+# Organigram github :
 
 ```mermaid
 graph LR
