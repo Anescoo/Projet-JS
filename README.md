@@ -13,13 +13,13 @@ Pour notre groupe nous avons choisi les outils suivants:</br>
     **Miro:** White board et Kanban pour les tâches </br>
     **IDE:** Visual Studio Code </br>
 
-# Organigram github (fait sur mermaid) :
+## Organigram github (fait sur mermaid) :
 
 >**mermaid** graph LR</br>A[branche Arnaud] -- push --> D((/dev))</br>D((/dev)) -- pull --> A[branche Arnaud]</br>B[branche Yasser] -- // --> D((/dev))</br>C[branche Noé] -- // --> D((/dev))</br>D -- Review avant push final --> E{{main}}</br>
 
  ![Alt text](https://i.imgur.com/OK8ltmW.png "Fait sur mermaid") </br>
 
-# Étapes
+## Étapes
 
 N'étend pas des vilains expérimentés dans la création de **site web** et découvrant tout juste les **API** il nous a fallu comprendre ce que sont les api et comment les faire interagir avec du javascript pour arriver à un site interactif. Pour apprendre rien de mieux que de s'inspirer de projets existant et décortiquer leur code.
 
