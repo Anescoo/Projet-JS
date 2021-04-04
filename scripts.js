@@ -22,29 +22,29 @@ request.onload = function () {
       card.setAttribute('class', 'card');
      
       // Heroes Name
-      const h1 = document.createElement('h1');
-      h1.textContent = heroes.name;
+      const CardHeroName = document.createElement('h1');
+      CardHeroName.textContent = heroes.name;
 
       //Full Name 
-      const p = document.createElement('p');
+      const CardFullName = document.createElement('p');
       heroes.biography.fullName = heroes.biography.fullName.substring(0, 300);
-      p.textContent = `${heroes.biography.fullName}...`;
+      CardFullName.textContent = `${heroes.biography.fullName}...`;
       
       // Place of birth 
-      const m = document.createElement('p')
+      const CardPlaceOfBirth = document.createElement('p')
       heroes.biography.placeOfBirth = heroes.biography.placeOfBirth.substring(0, 300);
-      m.textContent = `${heroes.biography.placeOfBirth}...`;
+      CardPlaceOfBirth.textContent = `${heroes.biography.placeOfBirth}...`;
      
       // Gender 
-      const n = document.createElement('p')
+      const CardGender = document.createElement('p')
       heroes.appearance.gender = heroes.appearance.gender.substring(0, 300);
-      n.textContent = `${heroes.appearance.gender}...`;
+      CardGender.textContent = `${heroes.appearance.gender}...`;
 
       container.appendChild(card);
-      card.appendChild(h1);
-      card.appendChild(p);
-      card.appendChild(m);
-      card.appendChild(n);
+      card.appendChild(CardHeroName);
+      card.appendChild(CardFullName);
+      card.appendChild(CardPlaceOfBirth);
+      card.appendChild(CardGender);
     });
   } else {
     const errorMessage = document.createElement('marquee');
@@ -57,7 +57,7 @@ request.send();
 
 /* -- Fonctione de tri de la barre de recherche -- */
 
-function myFunction() {
+function SearchBarTri() {
   var input, filter, ul, li, a, i, txtValue;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
