@@ -2,9 +2,9 @@
 =======
 
 # Les objectifs :
-Créer un site web qui regroupe les données de tous les super héros connus à ce jour. </br>
-Il faudra inclure une barre de recherche ainsi que plusieurs pages web et utiliser une **api** en **json** fournie. </br>
-Le projet doit être rendu sur un repository github. </br>
+Créer un site web qui regroupe les **données** de tous les super héros connus à ce jour. </br>
+Il faudra inclure une **barre de recherche** ainsi que **plusieurs pages web** et utiliser une **api** en **json** fournie. </br>
+Le projet doit être rendu dans un repository github. </br>
 
 # L'organisation :
 
@@ -17,7 +17,7 @@ Pour notre groupe nous avons choisi les outils suivants:</br>
 
 >**mermaid** graph LR</br>A[branche Arnaud] -- push --> D((/dev))</br>D((/dev)) -- pull --> A[branche Arnaud]</br>B[branche Yasser] -- // --> D((/dev))</br>C[branche Noé] -- // --> D((/dev))</br>D -- Review avant push final --> E{{main}}</br>
 
- ![Alt text](https://i.imgur.com/OK8ltmW.png "Fait sur mermaid") </br>
+ ![Alt text](https://i.imgur.com/OK8ltmW.png "Fait sur mermaid, open source markdown editor project") </br>
 
 ## Étapes
 
