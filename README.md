@@ -2,9 +2,9 @@
 =======
 
 # Les objectifs :
-Créer un site web qui regroupe les données de tous les super héros connus à ce jour. </br>
-Il faudra inclure une barre de recherche ainsi que plusieurs pages web et utiliser une **api** en **json** fournie. </br>
-Le projet doit être rendu sur un repository github. </br>
+Créer un site web qui regroupe les **données** de tous les super héros connus à ce jour. </br>
+Il faudra inclure une **barre de recherche** ainsi que **plusieurs pages web** et utiliser une **api** en **json** fournie. </br>
+Le projet doit être rendu dans un repository github. </br>
 
 # L'organisation :
 
@@ -17,7 +17,7 @@ Pour notre groupe nous avons choisi les outils suivants:</br>
 
 >**mermaid** graph LR</br>A[branche Arnaud] -- push --> D((/dev))</br>D((/dev)) -- pull --> A[branche Arnaud]</br>B[branche Yasser] -- // --> D((/dev))</br>C[branche Noé] -- // --> D((/dev))</br>D -- Review avant push final --> E{{main}}</br>
 
- ![Alt text](https://i.imgur.com/OK8ltmW.png "Fait sur mermaid") </br>
+ ![Alt text](https://i.imgur.com/OK8ltmW.png "Fait sur mermaid, open source markdown editor project") </br>
 
 ## Étapes
 
@@ -27,6 +27,8 @@ N'étend pas des vilains expérimentés dans la création de **site web** et dé
 >même le **CSS** nous a aidé a comprendre comment bien **filtrer** les informations comme nous le désirions.
 
 - La première chose que nous avons fait une fois le fichier **HTML** créé c'est appliquer l'**API** et afficher toute la **base de donnée** d'une traite pour avoir un bon début.
-- Nous voulions ensuite **manipuler** les informations comme nous le souhaitions, la prochaine étape était donc de regrouper chaque caractéristique des héros dans des variables individuelles et de regroupées chaque variable d'un même héro ensembles.
+- Nous voulions ensuite **manipuler** les informations comme nous le souhaitions, la prochaine étape était donc de regrouper chaque caractéristique des héros dans des variables individuelles et de regroupées chaque variable individuelles d'un même héro ensembles.
 - Une fois toute les données **triées** et **séparées/filtrées**, il ne nous restait plus qu'à rajouter de l'**interactivité** au site en faisant une **barre de recherche** pour que les vilains puissent trouver leur(s) héro(s) cible(s) plus rapidement ainsi qu'un **second template** qui affichera cette fois toute les infos du **héro sélectionné**.
-- Maintenant que les héros sont bien organisés et faciles d'accès il nous fallait plus d'esthétisme ainsi qu'un site **responsive** pour s'adapter à tous les **types de navigateurs**, nous ne savons que trop bien que tous les vilains ne sont pas aussi riches que Pingouin.
+- C'est super de pouvoir aller voir en détail toutes les infos d'un héro en particulier mais il faut pouvoir **revenir à l'écran d'accueil** ! En tant que super-vilains on a pas que ça à faire non-plus...
+
+/* - Maintenant que ces fichus héros sont bien organisés et faciles d'accès il nous fallait plus d'esthétisme ainsi qu'un site **responsive** pour s'adapter à tous les **types de navigateurs**, nous ne savons que trop bien que tous les vilains ne sont pas aussi riches que Pingouin. */
