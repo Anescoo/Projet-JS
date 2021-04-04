@@ -119,7 +119,7 @@
   .card:nth-child(2n):hover {
     box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
     transform: translate3D(0, -2px, 0);
-    background: #ffbaba;
+    background: #ffc8c8;
   }
 
   .card:nth-child(4n):hover {
