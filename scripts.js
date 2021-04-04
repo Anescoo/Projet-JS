@@ -3,24 +3,26 @@ const app = document.getElementById('root');
 const logo = document.createElement('img');
 logo.src = 'logo.png';
 
-const container = document.createElement('div');
+const container = document.createElement('div'); // on créer un élément contenaire qui contiendra
 container.setAttribute('class', 'container');
 
 app.appendChild(logo);
-app.appendChild(container);
+app.appendChild(container); // on ajoute les contenaires à la racine de l'application
 
 var request = new XMLHttpRequest();
 request.open('GET', 'https://rawcdn.githack.com/akabab/superhero-api/0.2.0/api/all.json', true);
 request.onload = function () {
 
-  // On commence à accèder aux données JSON 
+  // On créer des cartes qui vont affcicher les informations de manière claires pour l'utilisateur
   
-  var data = JSON.parse(this.response);
-  if (request.status >= 200 && request.status < 400) {
-    data.forEach(heroes => {
-      const card = document.createElement('div');
-      card.setAttribute('class', 'card');
+  var dataJSON = JSON.parse(this.response);
+  if (request.status >= 200 && request.status < 400) { //si aucune erreur
+    dataJSON.forEach(heroes => {                      // pour tous les héros du json
+      const card = document.createElement('div');     // on créé un élément carte sous forme de div qui
+      card.setAttribute('class', 'card');             // a un attribut class et carte (pour le CSS notamment)
      
+      // On créer des variables de chaque données de héro récupérées depuis le JSON
+
       // Heroes Name
       const CardHeroName = document.createElement('h1');
       CardHeroName.textContent = heroes.name;
@@ -40,12 +42,18 @@ request.onload = function () {
       heroes.appearance.gender = heroes.appearance.gender.substring(0, 300);
       CardGender.textContent = `${heroes.appearance.gender}...`;
 
-      container.appendChild(card);
+      //ajouter d'autres cartes ici à la suite
+
+      // On ajoute aux cartes les informations des héros
+      container.appendChild(card); // les cartes sont ajoutées dans le contenaire de l'application
       card.appendChild(CardHeroName);
       card.appendChild(CardFullName);
       card.appendChild(CardPlaceOfBirth);
       card.appendChild(CardGender);
+      // ajouter d'autres cartes ici à la suite
     });
+
+    // Gestion des erreures
   } else {
     const errorMessage = document.createElement('marquee');
     errorMessage.textContent = `Il ya un probleme`;
@@ -55,7 +63,7 @@ request.onload = function () {
 
 request.send();
 
-/* -- Fonctione de tri de la barre de recherche -- */
+/* -- Fonctione de tri de la barre de recherche récupérée -- */
 
 function SearchBarTri() {
   var input, filter, ul, li, a, i, txtValue;
