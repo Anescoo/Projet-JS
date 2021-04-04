@@ -9,7 +9,8 @@ container.setAttribute('class', 'container');
 app.appendChild(logo);
 app.appendChild(container); // on ajoute les contenaires à la racine de l'application
 
-var request = new XMLHttpRequest();
+// application de l'API 
+var request = new XMLHttpRequest(); 
 request.open('GET', 'https://rawcdn.githack.com/akabab/superhero-api/0.2.0/api/all.json', true);
 request.onload = function () {
 
@@ -21,7 +22,10 @@ request.onload = function () {
       const card = document.createElement('div');     // on créé un élément carte sous forme de div qui
       card.setAttribute('class', 'card');             // a un attribut class et carte (pour le CSS notamment)
      
-      // On créer des variables de chaque données de héro récupérées depuis le JSON
+
+     /* ############ 
+
+     On créer des variables de chaque données de héro récupérées depuis le JSON */
 
       // Heroes Name
       const CardHeroName = document.createElement('h1');
@@ -44,7 +48,10 @@ request.onload = function () {
 
       //ajouter d'autres cartes ici à la suite
 
-      // On ajoute aux cartes les informations des héros
+      /* #################### 
+      
+      On ajoute aux cartes les informations des héros */
+      
       container.appendChild(card); // les cartes sont ajoutées dans le contenaire de l'application
       card.appendChild(CardHeroName);
       card.appendChild(CardFullName);
