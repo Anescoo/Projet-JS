@@ -1,7 +1,7 @@
 const app = document.getElementById('root');
 
 const logo = document.createElement('img');
-logo.src = 'logo.png';
+logo.src = '/css/logo.png';
 
 const container = document.createElement('div'); // on créer un élément contenaire qui contiendra
 container.setAttribute('class', 'container');

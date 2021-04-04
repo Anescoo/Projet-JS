@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,16 +14,25 @@
     </style>
 </head>
 
-<body>*
-  <!-- Titre du site -->
-  <h3> Heroes Informations :</h3> 
-  <!-- Barre de recherche -->
-  <form action="#">
-    <input type="search" id="myInput" onkeyup="SearchBarTri()" placeholder="Search for hero names.." title="Click here and type in a name" required>
-    <button type="submit" text="submit"> </button>
-    <div id="root"></div>
-  </form>
-
+<body>
+  
+  
+   <!-- navbar -->
+  <nav>
+    <!-- Titre du site -->
+    <div class=logo>NomDuSite</div>
+    <div class="nav-shortcuts">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+    </div>
+    <h3> Heroes Informations :</h3> 
+    <!-- Barre de recherche -->
+    <form action="#">
+      <input type="search" id="myInput" onkeyup="SearchBarTri()" placeholder="Search for hero names.." title="Click here and type in a name" required>
+      <button type="submit" text="submit"> </button>
+      <div id="root"></div> <!-- id root = const app qui contient les containers -->
+    </form>
+  </nav> 
   <script src="scripts.js"></script>
 </body>
 
