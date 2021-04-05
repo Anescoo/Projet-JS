@@ -1,7 +1,7 @@
 const app = document.getElementById('root');
 
 const logo = document.createElement('img');
-logo.src = '/css/logo.png';
+logo.src = 'logo.png';
 
 const container = document.createElement('div'); // on créer un élément contenaire qui contiendra
 container.setAttribute('class', 'container');
@@ -45,9 +45,7 @@ request.onload = function () {
       const CardGender = document.createElement('p')
       heroes.appearance.gender = heroes.appearance.gender.substring(0, 300);
       CardGender.textContent = `${heroes.appearance.gender}...`;
-
-      //ajouter d'autres cartes ici à la suite
-
+     
       /* #################### 
       
       On ajoute aux cartes les informations des héros */
@@ -57,7 +55,6 @@ request.onload = function () {
       card.appendChild(CardFullName);
       card.appendChild(CardPlaceOfBirth);
       card.appendChild(CardGender);
-      // ajouter d'autres cartes ici à la suite
     });
 
     // Gestion des erreures
