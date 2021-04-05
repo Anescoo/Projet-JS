@@ -1,5 +1,5 @@
 /* -- Fonctione de tri de la barre de recherche récupérée -- */
-function SearchBarTri() {
+function SearchBar() {
   let filter = document.getElementById('filter').value.toUpperCase();
   
   let tableRecord = document.getElementById('tableRecord');
