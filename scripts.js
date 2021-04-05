@@ -1,4 +1,5 @@
-function myFunction() {
+/* -- Fonctione de tri de la barre de recherche récupérée -- */
+function SearchBar() {
   let filter = document.getElementById('filter').value.toUpperCase();
   
   let tableRecord = document.getElementById('tableRecord');
@@ -35,6 +36,8 @@ container.setAttribute('class', 'container');
 app.appendChild(logo);
 app.appendChild(container);
 
+// application de l'API 
+
 var request = new XMLHttpRequest();
 request.open('GET', 'https://rawcdn.githack.com/akabab/superhero-api/0.2.0/api/all.json', true);
 request.onload = function () {
@@ -44,6 +47,7 @@ request.onload = function () {
   var data = JSON.parse(this.response);
   if (request.status >= 200 && request.status < 400) {
     data.forEach(heroes => {
+      // On créer des cartes qui vont affciccher les informations de manière claires pour l'utilisateur
       const card = document.createElement('table');
       card.setAttribute('class', 'card');
      // Image hero
@@ -95,6 +99,7 @@ request.onload = function () {
      heroes.appearance.weight = heroes.appearance.weight;
      Weight.textContent = 'Weigth : '+ `${heroes.appearance.weight}`;
 
+     /*On ajoute aux cartes les informations des héros */
       container.appendChild(card);
       card.appendChild(HeroTitle);
       card.appendChild(img);
@@ -108,6 +113,7 @@ request.onload = function () {
       card.appendChild(Weight);
       
     });
+    // Gestion des erreur
   } else {
     const errorMessage = document.createElement('marquee');
     errorMessage.textContent = `Il ya un probleme`;
