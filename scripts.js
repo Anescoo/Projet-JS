@@ -1,17 +1,26 @@
 function myFunction() {
-  var input, filter, table, tr, a, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myUL");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-      a = tr[i].getElementsByTagName("table")[0];
-      txtValue = a.textContent || a.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
-      } else {
-          tr[i].style.display = "none";
+  let filter = document.getElementById('filter').value.toUpperCase();
+  
+  let tableRecord = document.getElementById('tableRecord');
+  
+  let tr = tableRecord.getElementsByTagName('table');
+  let thead = tableRecord.getElementsByTagName('thead');
+
+  for(var i = 0;i<thead.length;i++){
+    let td = thead[i];
+    if(td){
+      let textvalue = td.textContent || td.innerHTML;
+
+      if(textvalue.toUpperCase().indexOf(filter) > -1){
+        thead[i].style.display="";
+        tr[i].style.display="";
+
+      }else{
+        thead[i].style.display= "none";
+        tr[i].style.display= "none";
+
       }
+    }
   }
 }
 const app = document.getElementById('root');
@@ -20,7 +29,7 @@ const logo = document.createElement('img');
 logo.src = 'logo.png';
 
 const container = document.createElement('table');
-container.setAttribute('id','myUL');
+container.setAttribute('id','tableRecord');
 container.setAttribute('class', 'container');
 
 app.appendChild(logo);
@@ -37,7 +46,7 @@ request.onload = function () {
     data.forEach(heroes => {
       const card = document.createElement('table');
       card.setAttribute('class', 'card');
-     
+     // Image hero
       const im = document.createElement('img')
       im.src = heroes.images.xs
       // Heroes Name
