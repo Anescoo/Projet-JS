@@ -4,8 +4,8 @@ function SearchBar() {
   
   let tableRecord = document.getElementById('tableRecord');
   
-  let tr = tableRecord.getElementsByTagName('table');
-  let thead = tableRecord.getElementsByTagName('thead');
+  let tr = tableRecord.getElementsByTagName('tr');
+  let thead = tableRecord.getElementsByTagName('th');
 
   for(var i = 0;i<thead.length;i++){
     let td = thead[i];
@@ -33,8 +33,19 @@ const container = document.createElement('table');
 container.setAttribute('id','tableRecord');
 container.setAttribute('class', 'container');
 
+//const filtre = document.createElement('table')
+//filtre.setAttribute('class','filtre')
 app.appendChild(logo);
 app.appendChild(container);
+
+/*const title = document.createElement('tr')
+title.textContent = 'Nom'
+filtre.appendChild(title)
+
+const Full = document.createElement('tr')
+Full.textContent = 'Nom'
+filtre.appendChild(Full)
+container.appendChild(filtre)*/
 
 // application de l'API 
 
@@ -48,13 +59,18 @@ request.onload = function () {
   if (request.status >= 200 && request.status < 400) {
     data.forEach(heroes => {
       // On créer des cartes qui vont affciccher les informations de manière claires pour l'utilisateur
-      const card = document.createElement('table');
+      const card = document.createElement('tr');
       card.setAttribute('class', 'card');
      // Image hero
-      const img = document.createElement('img')
-      img.src = heroes.images.xs
+     
+      const img = document.createElement('td')
+      const im =document.createElement('img')
+
+      img.appendChild(im)
+
+      im.src = heroes.images.xs
       // Heroes Name
-      const HeroTitle = document.createElement('thead');
+      const HeroTitle = document.createElement('th');
       HeroTitle.textContent = heroes.name;
 
       //Full Name 
