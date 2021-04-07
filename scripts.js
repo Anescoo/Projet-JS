@@ -96,7 +96,8 @@ request.onload = function () {
     let pageActuelle = 1;
     let nbPage = Math.ceil(data.length/elements);
     
-    let dataActuelle = data.slice((pageActuelle - 1) * elements, pageActuelle * elements)
+    let dataActuelle = data.slice((pageActuelle - 1) * elements, pageActuelle * elements);
+    document.querySelectorAll('tr.card').forEach(element => element.remove());
 
     dataActuelle.forEach(heroes => {
       
@@ -181,7 +182,4 @@ request.onload = function () {
 }
 
 request.send();
-
-//// first try on multi pages
-
 
