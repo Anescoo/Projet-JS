@@ -91,7 +91,15 @@ request.onload = function () {
   
   var data = JSON.parse(this.response);
   if (request.status >= 200 && request.status < 400) {
-    data.forEach(heroes => {
+    
+    let elements = 25;
+    let pageActuelle = 1;
+    let nbPage = Math.ceil(data.length/elements);
+    
+    let dataActuelle = data.slice((pageActuelle - 1) * elements, pageActuelle * elements)
+
+    dataActuelle.forEach(heroes => {
+      
       // On créer des cartes qui vont affciccher les informations de manière claires pour l'utilisateur
       const card = document.createElement('tr');
       card.setAttribute('class', 'card');
@@ -177,9 +185,3 @@ request.send();
 //// first try on multi pages
 
 
-const data[];
-const element = 25;
-const pageActuel = 0;
-const nbPage = Math.ceil(data.legght/elements);
-
-const pageActuel = data.slice((currentPage - 1) * elements, currentPage * elements)
