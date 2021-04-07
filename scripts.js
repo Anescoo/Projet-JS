@@ -173,3 +173,11 @@ request.onload = function () {
 }
 
 request.send();
+
+//// first try on multi pages
+
+
+const data[];
+const element = 25;
+const pageActuel = 0;
+const nbPage = Math.ceil(data.legght/elements);
