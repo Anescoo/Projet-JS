@@ -27,8 +27,9 @@ N'étend pas des vilains expérimentés dans la création de **site web** et dé
 >même le **CSS** nous a aidé a comprendre comment bien **filtrer** les informations comme nous le désirions.
 
 - La première chose que nous avons fait une fois le fichier **HTML** créé c'est appliquer l'**API** et afficher toute la **base de donnée** d'une traite pour avoir un bon début.
-- Nous voulions ensuite **manipuler** les informations comme nous le souhaitions, la prochaine étape était donc de regrouper chaque caractéristique des héros dans des variables individuelles et de regroupées chaque variable individuelles d'un même héro ensembles.
-- Une fois toute les données **triées** et **séparées/filtrées**, il ne nous restait plus qu'à rajouter de l'**interactivité** au site en faisant une **barre de recherche** pour que les vilains puissent trouver leur(s) héro(s) cible(s) plus rapidement ainsi qu'un **second template** qui affichera cette fois toute les infos du **héro sélectionné**.
-- C'est super de pouvoir aller voir en détail toutes les infos d'un héro en particulier mais il faut pouvoir **revenir à l'écran d'accueil** ! En tant que super-vilains on a pas que ça à faire non-plus...
 
-/* - Maintenant que ces fichus héros sont bien organisés et faciles d'accès il nous fallait plus d'esthétisme ainsi qu'un site **responsive** pour s'adapter à tous les **types de navigateurs**, nous ne savons que trop bien que tous les vilains ne sont pas aussi riches que Pingouin. */
+- Nous voulions ensuite **manipuler** les informations comme nous le souhaitions, la prochaine étape était donc de regrouper chaque caractéristique des héros dans des variables individuelles et de regroupées chaque variable individuelles d'un même héro ensembles.
+
+- Une fois toute les données **séparées** et **filtrées**, il ne nous restait plus qu'à rajouter de l'**interactivité** au site en faisant une **barre de recherche** pour que les vilains puissent trouver leur(s) héro(s) cible(s) plus rapidement ainsi qu'une **fonctione de tri** pour arranger les héros dans l'ordre désiré: Par poid, taille, ordre alphabetique etc..
+
+- Maintenant que ces fichus héros sont bien organisés et faciles d'accès il nous fallait plus d'esthétisme ainsi qu'un site **responsive** pour s'adapter à tous les **types de navigateurs**, nous ne savons que trop bien que tous les vilains ne sont pas aussi riches que Pingouin, ainsi le site comprendra du **multi-page!**, la première page n'affichera qu'un certain nombre de héro, pour avoir accès aux autres il faudra changer de page en cliquant sur un **boutton**.
