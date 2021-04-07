@@ -5,7 +5,7 @@ function SearchBar() {
   let tableRecord = document.getElementById('tableRecord');
   
   let tr = tableRecord.getElementsByTagName('tr');
-  let thead = tableRecord.getElementsByTagName('th');
+  let thead = tableRecord.getElementsByTagName('thead');
 
   for(var i = 0;i<thead.length;i++){
     let td = thead[i];
@@ -33,19 +33,53 @@ const container = document.createElement('table');
 container.setAttribute('id','tableRecord');
 container.setAttribute('class', 'container');
 
-//const filtre = document.createElement('table')
-//filtre.setAttribute('class','filtre')
+const filtre = document.createElement('thead')
+filtre.setAttribute('class','filtre')
 app.appendChild(logo);
 app.appendChild(container);
 
-/*const title = document.createElement('tr')
+const title = document.createElement('tr')
 title.textContent = 'Nom'
 filtre.appendChild(title)
 
-const Full = document.createElement('tr')
-Full.textContent = 'Nom'
-filtre.appendChild(Full)
-container.appendChild(filtre)*/
+const image = document.createElement('th')
+image.textContent = 'img'
+title.appendChild(image)
+
+const fullName = document.createElement('th')
+fullName.textContent = 'Full Name '
+title.appendChild(fullName)
+
+const Pbirth = document.createElement('th')
+Pbirth.textContent = 'Place of birth '
+title.appendChild(Pbirth)
+
+const gender = document.createElement('th')
+gender.textContent = 'Gender'
+title.appendChild(gender)
+
+const Pstats = document.createElement('th')
+Pstats.textContent = 'Power Stats'
+title.appendChild(Pstats)
+
+const race = document.createElement('th')
+race.textContent = 'Race '
+title.appendChild(race)
+
+const align = document.createElement('th')
+align.textContent = 'Alignement'
+title.appendChild(align)
+
+const height = document.createElement('th')
+height.textContent = 'Height'
+title.appendChild(height)
+
+const weight = document.createElement('th')
+weight.textContent = 'Weight'
+title.appendChild(weight)
+
+
+container.appendChild(filtre)
 
 // application de l'API 
 
@@ -70,23 +104,24 @@ request.onload = function () {
 
       im.src = heroes.images.xs
       // Heroes Name
-      const HeroTitle = document.createElement('th');
+      const HeroTitle = document.createElement('thead');
+      HeroTitle.setAttribute('class','hero')
       HeroTitle.textContent = heroes.name;
 
       //Full Name 
       const Fname = document.createElement('td');
       heroes.biography.fullName = heroes.biography.fullName;
-      Fname.textContent = 'Full Name : ' + `${heroes.biography.fullName}`;
+      Fname.textContent =  `${heroes.biography.fullName}`;
       
       // Place of birth 
       const Place = document.createElement('td')
       heroes.biography.placeOfBirth = heroes.biography.placeOfBirth;
-      Place.textContent = 'Place of birth : '+ `${heroes.biography.placeOfBirth}`;
+      Place.textContent = `${heroes.biography.placeOfBirth}`;
      
       // Gender 
       const Gender = document.createElement('td')
       heroes.appearance.gender = heroes.appearance.gender;
-      Gender.textContent = 'Gender : '+`${heroes.appearance.gender}`;
+      Gender.textContent = `${heroes.appearance.gender}`;
       
       // Power Stats 
       const Power = document.createElement('td')
@@ -99,21 +134,21 @@ request.onload = function () {
     // Race
     const Race = document.createElement('td')
     heroes.appearance.race = heroes.appearance.race;
-    Race.textContent = 'Race : ' + `${heroes.appearance.race}`
+    Race.textContent = `${heroes.appearance.race}`
     // Alignement 
     const Align = document.createElement('td')
     heroes.biography.alignment = heroes.biography.alignment;
-    Align.textContent = 'Alignement : '+ `${heroes.biography.alignment}`;
+    Align.textContent = `${heroes.biography.alignment}`;
    
     // height 
     const Height = document.createElement('td')
     heroes.appearance.height = heroes.appearance.height;
-    Height.textContent = 'Heigth : '+ `${heroes.appearance.height}`;
+    Height.textContent = `${heroes.appearance.height}`;
 
      // weight 
      const Weight = document.createElement('td')
      heroes.appearance.weight = heroes.appearance.weight;
-     Weight.textContent = 'Weigth : '+ `${heroes.appearance.weight}`;
+     Weight.textContent = `${heroes.appearance.weight}`;
 
      /*On ajoute aux cartes les informations des héros */
       container.appendChild(card);
