@@ -181,3 +181,5 @@ const data[];
 const element = 25;
 const pageActuel = 0;
 const nbPage = Math.ceil(data.legght/elements);
+
+let dataPage = data.slice((dataPage -1)+ elements);
