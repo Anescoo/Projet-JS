@@ -92,12 +92,27 @@ request.onload = function () {
   var data = JSON.parse(this.response);
   if (request.status >= 200 && request.status < 400) {
     
-    let elements = 25;
+    // 
+
+    let elements = 20;
     let pageActuelle = 1;
-    let nbPage = Math.ceil(data.length/elements);
-    
     let dataActuelle = data.slice((pageActuelle - 1) * elements, pageActuelle * elements);
-    document.querySelectorAll('tr.card').forEach(element => element.remove());
+    
+    // 
+
+    const nbPages = 23
+    for(let i = 1; i<=nbPages; i++){
+      const button = document.createElement('button');
+      button.innerHTML = i;
+      button.addEventListener('click', function(){
+        console.log('load page '+this.innerHTML);
+      })
+      document.body.appendChild(button)
+    }
+
+    // une fois la page sélectionnée on doit remove les éléments avant de réafficher les autres
+
+    document.querySelectorAll('tr.card').forEach(elements => elements.remove());
 
     dataActuelle.forEach(heroes => {
       
