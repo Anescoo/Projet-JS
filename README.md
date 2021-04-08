@@ -2,6 +2,17 @@
 <h1> EXAMEN JAVASCRIPT B1 Info </h1>
 =======
 
+# Usage :
+
+Pour pouvoir utiliser le site il vous faudra télécharger le contenu du répository dans son intégralité
+et ouvrir le fichier '**index.html**'. Vous pouvez faire des recherches avec les noms des héros en haut à gauche dans la barre de recherché prévue à cet effet.
+Il est possible de cliquer sur les entête de tableau (en noir) pour lancer un tri automatique selon la colonne sélectionnée !
+
+- // W I P //
+    Les fonctions d'affichage d'un certain nombre de héro sur la page, ainsi que naviguer entre ces pages ne sont pas encore complètes, veuiller nous excuser pour ce désagrément !
+ 
+
+
 # Les objectifs :
 Créer un site web qui regroupe les **données** de tous les super héros connus à ce jour. </br>
 Il faudra inclure une **barre de recherche** ainsi que **plusieurs pages web** et utiliser une **api** en **json** fournie. </br>
