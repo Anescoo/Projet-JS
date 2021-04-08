@@ -98,9 +98,9 @@ request.onload = function () {
     let pageActuelle = 1;
     let dataActuelle = data.slice((pageActuelle - 1) * elements, pageActuelle * elements);
     
-    // 
+    // affiche les boutons
 
-    const nbPages = 23
+    const nbPages = 29  // 563/20 = 28.15 par défaut, la dernière page affichera le dernier héro
     for(let i = 1; i<=nbPages; i++){
       const button = document.createElement('button');
       button.innerHTML = i;
