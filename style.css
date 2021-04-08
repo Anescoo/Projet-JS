@@ -1,0 +1,23 @@
+
+body{
+  background-color:grey;
+}
+
+  table,
+td {
+    border: 1px solid #333;
+}
+
+
+thead {
+    background-color:black;
+
+    color: #fff;
+}
+img {
+  display: block;
+  margin: auto;
+  
+}
+
+
