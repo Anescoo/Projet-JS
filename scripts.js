@@ -2,7 +2,6 @@
 function searchBar() {
   let filter = document.getElementById('filter').value.toUpperCase();
   
-  let tableRecord = document.getElementById('tableRecord');
 
   let tr = tableRecord.getElementsByTagName('tr');
 
