@@ -1,3 +1,4 @@
+=======
 <h1> EXAMEN JAVASCRIPT B1 Info </h1>
 =======
 
@@ -33,3 +34,4 @@ N'étend pas des vilains expérimentés dans la création de **site web** et dé
 - Une fois toute les données **séparées** et **filtrées**, il ne nous restait plus qu'à rajouter de l'**interactivité** au site en faisant une **barre de recherche** pour que les vilains puissent trouver leur(s) héro(s) cible(s) plus rapidement ainsi qu'une **fonctione de tri** pour arranger les héros dans l'ordre désiré: Par poid, taille, ordre alphabetique etc..
 
 - Maintenant que ces fichus héros sont bien organisés et faciles d'accès il nous fallait plus d'esthétisme ainsi qu'un site **responsive** pour s'adapter à tous les **types de navigateurs**, nous ne savons que trop bien que tous les vilains ne sont pas aussi riches que Pingouin, ainsi le site comprendra du **multi-page!**, la première page n'affichera qu'un certain nombre de héro, pour avoir accès aux autres il faudra changer de page en cliquant sur un **boutton**.
+
