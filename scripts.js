@@ -21,7 +21,6 @@ function searchBar() {
   }
 }
 
-=======
 
 const app = document.getElementById('root');
 
@@ -174,25 +173,30 @@ request.onload = function () {
       const Gender = document.createElement('td')
 
       Gender.textContent = `${heroes.appearance.gender}`;
-      //Intelligence
       
-      // Power Stats 
+     // Power Stats 
+      
+       //Intelligence
+      
       const intel = document.createElement('td');
       intel.textContent = `${heroes.powerstats.intelligence}`;
 
       const streng = document.createElement('td'); 
       streng.textContent = `${heroes.powerstats.strength}`;
 
-  
+       // Speed
       const spee = document.createElement('td'); 
       spee.textContent = `${heroes.powerstats.speed}`
 
+       // Durability
       const durab = document.createElement('td'); 
       durab.textContent = `${heroes.powerstats.durability}`
 
+       // Power
       const pow = document.createElement('td'); 
       pow.textContent = `${heroes.powerstats.power}`
 
+       // Combat
       const comb = document.createElement('td'); 
       comb.textContent = `${heroes.powerstats.combat}`
     
