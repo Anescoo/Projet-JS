@@ -116,7 +116,7 @@ request.onload = function () {
   var data = JSON.parse(this.response);
   if (request.status >= 200 && request.status < 400) {
     
-    // 
+    const tbody = document.createElement('tbody');
 
     let elements = 20;
     let pageActuelle = 1;
