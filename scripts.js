@@ -91,7 +91,31 @@ request.onload = function () {
   
   var data = JSON.parse(this.response);
   if (request.status >= 200 && request.status < 400) {
-    data.forEach(heroes => {
+    
+    // 
+
+    let elements = 20;
+    let pageActuelle = 1;
+    let dataActuelle = data.slice((pageActuelle - 1) * elements, pageActuelle * elements);
+    
+    // affiche les boutons
+
+    const nbPages = 29  // 563/20 = 28.15 par défaut, la dernière page affichera le dernier héro
+    for(let i = 1; i<=nbPages; i++){
+      const button = document.createElement('button');
+      button.innerHTML = i;
+      button.addEventListener('click', function(){
+        console.log('load page '+this.innerHTML);
+      })
+      document.body.appendChild(button)
+    }
+
+    // une fois la page sélectionnée on doit remove les éléments avant de réafficher les autres
+
+    document.querySelectorAll('tr.card').forEach(elements => elements.remove());
+
+    dataActuelle.forEach(heroes => {
+      
       // On créer des cartes qui vont affciccher les informations de manière claires pour l'utilisateur
       const card = document.createElement('tr');
       card.setAttribute('class', 'card');
@@ -173,3 +197,4 @@ request.onload = function () {
 }
 
 request.send();
+

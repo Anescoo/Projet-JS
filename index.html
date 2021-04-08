@@ -52,8 +52,19 @@
     <h3> Heroes Informations :</h3>
     <input type="text" id="filter" onkeyup="SearchBar()" placeholder="Search for names.." title="Type in a name">
     
-  <div id="root">
-   
+  <div id="root"></br>
+  
+<span>Choose the number of heroes on this page to display on this page:</span></br>
+  </br>
+    <select name="numberOfElements" size='5' >
+      <!-- value = Nb_total_héro/nb_Elément sur la page, arrondi au suppérieur-->
+      <option value='57'> 10 </option>
+      <option value='29' selected='selected'> 20 </option> <!-- 20 héros par défaut-->
+      <option value='12'> 50 </option>
+      <option value='6'> 100 </option>
+      <option value='1'> All of them !</option>
+    </select>
+
 </table>
   </div>
 
