@@ -1,4 +1,5 @@
 /* -- Fonctione de tri de la barre de recherche récupérée -- */
+
 function searchBar() {
   let filter = document.getElementById('filter').value.toUpperCase();
   
@@ -13,17 +14,14 @@ function searchBar() {
 
       if(textvalue.toUpperCase().indexOf(filter) > -1){
         thead[i].style.display="";
-        
-
       }else{
         thead[i].style.display= "none";
-        
-
       }
     }
   }
 }
 
+=======
 
 const app = document.getElementById('root');
 
@@ -63,8 +61,6 @@ filtre.appendChild(Pbirth);
 const gender = document.createElement('th');
 gender.textContent = 'Gender';
 filtre.appendChild(gender);
-
-
 
 const intelligence = document.createElement('th');
 intelligence.textContent = 'Intelligence';
@@ -106,8 +102,9 @@ const weight = document.createElement('th');
 weight.textContent = 'Weight';
 filtre.appendChild(weight);
 
-
 container.appendChild(filtre);
+
+
 
 // application de l'API 
 
@@ -116,17 +113,37 @@ request.open('GET', 'https://rawcdn.githack.com/akabab/superhero-api/0.2.0/api/a
 request.onload = function () {
 
   // On commence à accèder aux données JSON 
-  const tbody = document.createElement('tbody');
+
   var data = JSON.parse(this.response);
   if (request.status >= 200 && request.status < 400) {
-    data.forEach(heroes => {
-      // On créer des cartes qui vont afficher les informations de manière claires pour l'utilisateur
+    
+    // 
 
+    let elements = 20;
+    let pageActuelle = 1;
+    let dataActuelle = data.slice((pageActuelle - 1) * elements, pageActuelle * elements);
+    
+    // affiche les boutons
+
+    const nbPages = 29  // 563/20 = 28.15 par défaut, la dernière page affichera le dernier héro
+    for(let i = 1; i<=nbPages; i++){
+      const button = document.createElement('button');
+      button.innerHTML = i;
+      button.addEventListener('click', function(){
+        console.log('load page '+this.innerHTML);
+      })
+      document.body.appendChild(button)
+    }
+
+    // une fois la page sélectionnée on doit remove les éléments avant de réafficher les autres
+
+    document.querySelectorAll('tr.card').forEach(elements => elements.remove());
+
+    dataActuelle.forEach(heroes => {
+      
+      // On créer des cartes qui vont affciccher les informations de manière claires pour l'utilisateur
       const card = document.createElement('tr');
       card.setAttribute('class', 'card');
-      
-    
-    
 
      // Image hero
      
@@ -137,20 +154,25 @@ request.onload = function () {
 
       im.src = heroes.images.xs
       // Heroes Name
+
       const HeroTitle = document.createElement('td');
+
       HeroTitle.setAttribute('class','hero')
       HeroTitle.textContent = heroes.name;
 
       //Full Name 
       const Fname = document.createElement('td');
+
       Fname.textContent =  `${heroes.biography.fullName}`;
       
       // Place of birth 
       const Place = document.createElement('td')
+
       Place.textContent = `${heroes.biography.placeOfBirth}`;
      
       // Gender 
       const Gender = document.createElement('td')
+
       Gender.textContent = `${heroes.appearance.gender}`;
       //Intelligence
       
@@ -192,21 +214,25 @@ request.onload = function () {
 
      /*On ajoute aux cartes les informations des héros */
       //container.appendChild(card);
+
       card.appendChild(HeroTitle);
       card.appendChild(img);
       card.appendChild(Fname);
       card.appendChild(Place);
       card.appendChild(Gender);
+
       card.appendChild(intel);
       card.appendChild(streng);
       card.appendChild(spee);
       card.appendChild(durab);
       card.appendChild(pow);
       card.appendChild(comb);
+
       card.appendChild(Race);
       card.appendChild(Align);
       card.appendChild(Height);
       card.appendChild(Weight);
+
       tbody.appendChild(card);
     });
     
@@ -247,3 +273,4 @@ request.onload = function () {
 }
 
 request.send();
+

@@ -1,13 +1,17 @@
+
 body{
   background-color:sienna;
 }
+
   table,
 td {
     border: 1px solid #333;
 }
 
+
 thead {
     background-color:black;
+
     color: #fff;
 }
 img {
@@ -15,4 +19,5 @@ img {
   margin: auto;
   
 }
+
 
